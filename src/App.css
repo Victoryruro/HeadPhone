@@ -1,0 +1,10 @@
+
+@import "tailwindcss";
+.brandDark{
+    --brandDark:#151616;
+    background-color: var(--brandDark) ;
+}
+.primary{
+  color: var(--primary);
+  
+}
