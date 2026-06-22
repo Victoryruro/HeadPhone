@@ -3,8 +3,13 @@
 .brandDark{
     --brandDark:#151616;
     background-color: var(--brandDark) ;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 .primary{
   color: var(--primary);
   
+}
+.font{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
