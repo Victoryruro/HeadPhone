@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './Component/Navbar/Navbar'
 import { UpdateFollower } from 'react-mouse-follower'
 import Hero from './Component/Hero/Hero'
+import Services from './Component/Services/Services'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
           mouseOptions={
             {
               backgroundColor:'whitesmoke',
-              zIndex:0.5,
+              zIndex:999,
               followSpeed:1.5,
               radius:20,
               mixBlendMode:'difference',
@@ -28,6 +29,24 @@ function App() {
           <Navbar/>  
           <Hero/>
         </UpdateFollower>
+        <UpdateFollower 
+          mouseOptions={
+            {
+              backgroundColor:'blanchedalmond',
+              zIndex:999,
+              followSpeed:1.5,
+              // radius:20,
+              scale:2,
+              // mixBlendMode:'difference',
+              
+              
+              
+            }
+          }
+        >
+          <Services/>
+        </UpdateFollower>
+        
         
       </main>        
 
