@@ -5,6 +5,7 @@ import Navbar from './Component/Navbar/Navbar'
 import { UpdateFollower } from 'react-mouse-follower'
 import Hero from './Component/Hero/Hero'
 import Services from './Component/Services/Services'
+import Banner from './Component/Banner/Banner'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,6 +46,7 @@ function App() {
           }
         >
           <Services/>
+          <Banner/>
         </UpdateFollower>
         
         

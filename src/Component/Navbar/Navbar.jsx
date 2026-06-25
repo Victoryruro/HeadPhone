@@ -89,6 +89,41 @@ const Navbar = () => {
                 {/* mobile */}
                 <div className='md:hidden'>
                     <MdMenu className='text-4xl'/>
+                        <ul className='flex flex-col items-center gap-4 bg-neutral-400 text-black '>
+                        {
+                            NavbarMenu.map((item) => (
+                                
+                                <li key={item.id}>
+                                    <UpdateFollower
+                                        mouseOptions={
+                                            {
+                                            backgroundColor:'whitesmoke',
+                                            zIndex:999,
+                                            followSpeed:1.5,
+                                            scale:2,
+                                            mixBlendMode:'difference',
+                                            
+                                            
+                                            
+                                            }
+                                        }
+                                    >
+                                        <a 
+                                        href={item.link} 
+                                        className='inline-block text-sm py-2 px-3 uppercase'>
+                                            {item.title}
+                                        </a> 
+
+                                    </UpdateFollower>
+   
+
+                                </li>
+                            ))
+                        }
+                        <button className='text-xl ps-14'>
+                            <SlEarphones/>
+                        </button>
+                    </ul>
                         
                 </div>
             </motion.nav>

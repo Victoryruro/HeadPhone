@@ -56,7 +56,7 @@ const Services = () => {
 
                             }}
                         >
-                            <div className='flex flex-col items-center justify-center p-5 max-w-75 mx-auto shadow-lg rounded-xl bg-white'>
+                            <div className='flex flex-col items-center justify-center p-5 max-w-100 mx-auto shadow-lg rounded-xl bg-white'>
                                 <img src={data.icon} alt="icon" className='w-25 mb-4' />
                                 <div className='text-center space-y-2'>
                                     <h1 className='text-2xl font-bold text-center'>{data.title}</h1>
