@@ -6,6 +6,7 @@ import { UpdateFollower } from 'react-mouse-follower'
 import Hero from './Component/Hero/Hero'
 import Services from './Component/Services/Services'
 import Banner from './Component/Banner/Banner'
+import BannerText from './Component/Banner/BannerText'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,11 +34,11 @@ function App() {
         <UpdateFollower 
           mouseOptions={
             {
-              backgroundColor:'blanchedalmond',
+              backgroundColor:'#446a6e',
               zIndex:999,
               followSpeed:1.5,
               // radius:20,
-              scale:2,
+              scale:3,
               // mixBlendMode:'difference',
               
               
@@ -47,6 +48,7 @@ function App() {
         >
           <Services/>
           <Banner/>
+          <BannerText/>
         </UpdateFollower>
         
         
