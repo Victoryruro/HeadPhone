@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdMenu} from 'react-icons/md'
 import {SlEarphones} from 'react-icons/sl'
 import { UpdateFollower } from 'react-mouse-follower'
@@ -34,6 +34,8 @@ const NavbarMenu =[
 ]
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <>
         <div className='brandDark text-white py-8 font-sans '>
@@ -87,9 +89,17 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {/* mobile */}
-                <div className='md:hidden'>
-                    <MdMenu className='text-4xl'/>
-                        <ul className='flex flex-col items-center gap-4 bg-neutral-400 text-black '>
+                <div className='relative md:hidden'>
+                    <button
+                        type='button'
+                        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                        onClick={() => setMenuOpen((open) => !open)}
+                        className='text-white text-3xl rounded-full   p-2 hover:bg-white/10 transition'
+                    >
+                        <MdMenu />
+                    </button>
+                    {menuOpen && (
+                        <ul className='absolute w-100 mx-auto right-[-57px]  top-full h-125 z-50   rounded-2xl bg-[#edf1f5] p-4  text-black'>
                         {
                             NavbarMenu.map((item) => (
                                 
@@ -97,20 +107,18 @@ const Navbar = () => {
                                     <UpdateFollower
                                         mouseOptions={
                                             {
-                                            backgroundColor:'whitesmoke',
+                                            backgroundColor:'black',
                                             zIndex:999,
                                             followSpeed:1.5,
                                             scale:2,
                                             mixBlendMode:'difference',
-                                            
-                                            
-                                            
                                             }
                                         }
                                     >
                                         <a 
                                         href={item.link} 
-                                        className='inline-block text-sm py-2 px-3 uppercase'>
+                                        onClick={() => setMenuOpen(false)}
+                                        className='block text-sm py-3 px-3 uppercase tracking-[0.18em]  transition'>
                                             {item.title}
                                         </a> 
 
@@ -120,11 +128,13 @@ const Navbar = () => {
                                 </li>
                             ))
                         }
-                        <button className='text-xl ps-14'>
-                            <SlEarphones/>
-                        </button>
+                        <li className=' justify-center pt-2 hidden md:flex'>
+                            <button className=' inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-white text-lg hover:bg-white/10 transition'>
+                                <SlEarphones />
+                            </button>
+                        </li>
                     </ul>
-                        
+                    )}
                 </div>
             </motion.nav>
 
