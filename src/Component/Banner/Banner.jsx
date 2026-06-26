@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <>
         <section>
-            <div className="container py-14 grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 gap-12">
+            <div className="container py-14 grid grid-cols-1  md:grid-cols-2 space-y-6 md:space-y-0 gap-12">
                 {/* image */}
                 <div>
                     <motion.img 
@@ -16,11 +16,11 @@ const Banner = () => {
                         animate={{opacity:1, x:0, rotate:0, }}
                         transition={{duration:0.4 , ease:'easeInOut' , delay:0.1}}
                     
-                    src={Image} alt="headphones" className='w-[300px] md:w-[400px] '/>
+                    src={Image} alt="headphones" className='w-[300px] md:w-[400px] mx-auto'/>
                 </div>
 
                 {/* text */}
-                <div className='flex flex-col justify-center'>
+                <div className='flex flex-col justify-center mx-auto'>
                     <div className='text-center md:text-left space-y-4 lg: max-w-[450px]'>
                         <motion.h1
                             variants={fadeUp(0.7)}

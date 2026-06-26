@@ -187,7 +187,7 @@ const Hero = () => {
 
           </div>
           {/* image */}
-          <div className='flex flex-col justify-end items-center'>
+          <div className='flex flex-col justify-end items-center z-0'>
             <AnimatePresence mode='wait'>
                 <motion.img  key={activeData.id} 
                     variants={fadeUp(0.3)}

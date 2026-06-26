@@ -7,6 +7,7 @@ import Hero from './Component/Hero/Hero'
 import Services from './Component/Services/Services'
 import Banner from './Component/Banner/Banner'
 import BannerText from './Component/Banner/BannerText'
+import Blog from './Component/Blog/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,8 +18,8 @@ function App() {
         <UpdateFollower 
           mouseOptions={
             {
-              backgroundColor:'whitesmoke',
-              zIndex:999,
+              backgroundColor:'white',
+              zIndex:9999,
               followSpeed:1.5,
               radius:20,
               mixBlendMode:'difference',
@@ -35,7 +36,7 @@ function App() {
           mouseOptions={
             {
               backgroundColor:'#446a6e',
-              zIndex:999,
+              zIndex:9999,
               followSpeed:1.5,
               // radius:20,
               scale:3,
@@ -49,6 +50,7 @@ function App() {
           <Services/>
           <Banner/>
           <BannerText/>
+          <Blog/>
         </UpdateFollower>
         
         
