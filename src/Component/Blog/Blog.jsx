@@ -2,6 +2,8 @@ import React from 'react'
 import blogImg from '../../assets/blog2.jpg'
 import { UpdateFollower } from 'react-mouse-follower'
 import { motion } from 'framer-motion'
+import Banner from '../Banner/Banner'
+import BannerText from '../Banner/BannerText'
 
 const blogData =[
     {
@@ -44,12 +46,21 @@ const blogData =[
         img: blogImg,
 
     },
+    {
+        id:6,
+        title :'Making Headset and Accessories last better',
+        desc:'Lorem ipsum dolor sit amet consectetur adispisci elit. recusander iusto',
+        link:'#',
+        img: blogImg,
+
+    },
 
 ]
 
 const Blog = () => {
   return (
     <>
+       
         <section className='bg-gray-100 p-2'>
             <div className="container py-14">
                 <h1 className='text-3xl font-bold text-center pb-8 font-serif'>Blog</h1>
@@ -90,6 +101,26 @@ const Blog = () => {
             </div>
 
         </section>
+        <UpdateFollower 
+            mouseOptions={
+                {
+                backgroundColor:'#446a6e',
+                zIndex:9999,
+                followSpeed:1.5,
+                // radius:20,
+                scale:3,
+                // mixBlendMode:'difference',
+                
+                
+                
+                }
+            }
+            >
+            
+            <Banner/>
+            <BannerText/>
+
+        </UpdateFollower>    
     </>
   )
 }

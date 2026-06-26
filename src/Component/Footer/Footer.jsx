@@ -4,6 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { MdLocationOn } from 'react-icons/md'
 import Card from "../../assets/credit-cards.webp"
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
     <>
     <footer className='bg-[#446a6e8a] pt-12 pb-8 p-3.5 mt-2.5 text-black/100 mx-auto'>
         <div className="container mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto ">
                 {/*detials  */}
                 <motion.div
                     initial={{opacity:0, y:100}}
@@ -39,8 +40,12 @@ const Footer = () => {
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
                         <div>
                             <ul>
-                                <li>Home</li>
-                                <li>Blog</li>
+                                <li>
+                                    <Link to='/'>Home</Link>
+                                </li>
+                                <li>
+                                    <Link to='/blog'>Blog</Link>
+                                </li>
                                 <li>Contact Us</li>
                                 <li>Privacy Policy</li>
                             </ul>

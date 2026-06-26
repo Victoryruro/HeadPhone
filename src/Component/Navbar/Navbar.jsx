@@ -8,7 +8,7 @@ const NavbarMenu =[
     {
         id:1,
         title:"Home",
-        link : "#",
+        link : "/",
     },
     {
         id:2,
@@ -18,7 +18,7 @@ const NavbarMenu =[
     {
         id:3,
         title:"Blog",
-        link : "#",
+        link :"/Blog" ,
     },
     {
         id:4,
@@ -99,7 +99,7 @@ const Navbar = () => {
                         <MdMenu />
                     </button>
                     {menuOpen && (
-                        <ul className='absolute w-100 mx-auto right-[-57px]  top-full h-125 z-50   rounded-2xl bg-[#edf1f5] p-4  text-black'>
+                        <ul className='absolute w-100  right-[0px]  top-full h-125 z-50   rounded-2xl bg-[#edf1f5] p-4  text-black transition-all ease-in-out duration-300'>
                         {
                             NavbarMenu.map((item) => (
                                 

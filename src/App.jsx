@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Navbar from './Component/Navbar/Navbar'
 import { UpdateFollower } from 'react-mouse-follower'
@@ -9,30 +10,35 @@ import Banner from './Component/Banner/Banner'
 import BannerText from './Component/Banner/BannerText'
 import Blog from './Component/Blog/Blog'
 import Footer from './Component/Footer/Footer'
+import Main from './Component/Main/Main';
+ 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <main className='overflow-x-hidden'>
+      <BrowserRouter>
         <UpdateFollower 
-          mouseOptions={
-            {
-              backgroundColor:'white',
-              zIndex:9999,
-              followSpeed:1.5,
-              radius:20,
-              mixBlendMode:'difference',
-              
-              
-              
+            mouseOptions={
+              {
+                backgroundColor:'white',
+                zIndex:9999,
+                followSpeed:1.5,
+                radius:20,
+                mixBlendMode:'difference',
+                
+                
+                
+              }
             }
-          }
-        >
-          <Navbar/>  
-          <Hero/>
+          >
+            <Navbar /> 
         </UpdateFollower>
+        <Routes>
+            <Route path="/" element={<Main/>} />
+            <Route path='/Blog' element={<Blog/>}/>
+        </Routes>
         <UpdateFollower 
           mouseOptions={
             {
@@ -48,15 +54,14 @@ function App() {
             }
           }
         >
-          <Services/>
-          <Banner/>
-          <BannerText/>
-          <Blog/>
           <Footer/>
         </UpdateFollower>
+      </BrowserRouter>
+
+
         
         
-      </main>        
+      
 
     </>
   )
