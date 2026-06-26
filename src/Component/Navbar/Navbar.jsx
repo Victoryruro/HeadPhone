@@ -18,7 +18,7 @@ const NavbarMenu =[
     {
         id:3,
         title:"Blog",
-        link :"/blog" ,
+        link :"/Blog" ,
     },
     {
         id:4,
