@@ -8,6 +8,7 @@ import Services from './Component/Services/Services'
 import Banner from './Component/Banner/Banner'
 import BannerText from './Component/Banner/BannerText'
 import Blog from './Component/Blog/Blog'
+import Footer from './Component/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -51,6 +52,7 @@ function App() {
           <Banner/>
           <BannerText/>
           <Blog/>
+          <Footer/>
         </UpdateFollower>
         
         
