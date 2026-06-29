@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
-    <footer className='bg-[#446a6e8a] pt-12 pb-8 p-3.5 mt-2.5 text-black/100 mx-auto'>
+    <footer className='bg-[#446a6e8a] pt-12 pb-8 p-3.5 mt-2.5 text-black/100 mx-auto' >
         <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto ">
                 {/*detials  */}
@@ -52,11 +52,11 @@ const Footer = () => {
                         </div>
                         <div>
                             <ul>
-                               <li>
+                               <li >
                                     <Link to='/'>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to='/Blog'>Blog</Link>
+                                    <Link to='/Blog' >Blog</Link>
                                 </li>
                                 <li>Contact Us</li>
                                 <li>Privacy Policy</li>

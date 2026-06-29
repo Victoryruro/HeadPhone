@@ -54,7 +54,8 @@ function App() {
             }
           }
         >
-          <Footer/>
+         
+          <Footer id='footer'/>
         </UpdateFollower>
       </BrowserRouter>
 

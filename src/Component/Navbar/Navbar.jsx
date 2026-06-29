@@ -3,6 +3,8 @@ import { MdMenu} from 'react-icons/md'
 import {SlEarphones} from 'react-icons/sl'
 import { UpdateFollower } from 'react-mouse-follower'
 import { motion } from 'framer-motion' 
+import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 
 const NavbarMenu =[
     {
@@ -13,7 +15,7 @@ const NavbarMenu =[
     {
         id:2,
         title:"Category",
-        link : "#",
+        link : "/",
     },
     {
         id:3,
@@ -23,12 +25,12 @@ const NavbarMenu =[
     {
         id:4,
         title:"About",
-        link : "#",
+        link : "/",
     },
     {
         id:5,
         title:"Contact",
-        link : "#",
+        link : "/",
     }
 
 ]
@@ -74,7 +76,8 @@ const Navbar = () => {
                                         <a 
                                         href={item.link} 
                                         className='inline-block text-sm py-2 px-3 uppercase'>
-                                            {item.title}
+                                            <Link to={item.link}>{item.title}</Link>
+                                            
                                         </a> 
 
                                     </UpdateFollower>
@@ -119,7 +122,7 @@ const Navbar = () => {
                                         href={item.link} 
                                         onClick={() => setMenuOpen(false)}
                                         className='block text-sm py-3 px-3 uppercase tracking-[0.18em]  transition'>
-                                            {item.title}
+                                            <Link to={item.link}>{item.title}</Link>
                                         </a> 
 
                                     </UpdateFollower>
